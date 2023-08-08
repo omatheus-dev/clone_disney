@@ -31,6 +31,19 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < questions.length; i++) {
         questions[i].addEventListener('click', abreOuFechaResposta);
     }
+
+    $(document).ready(function() {
+        $('.autoplay').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 500,
+        autoplaySpeed: 5000,
+        infinite: true,
+        centerMode: true,
+        centerPadding: true,
+        });
+    })
 })
 
 function ocultaElementosDoHeader() {
@@ -66,3 +79,4 @@ function escondeTodasAbas() {
         tabsContainer[i].classList.remove('shows__list--is-active');
     }
 }
+
